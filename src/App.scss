@@ -1,0 +1,59 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  header,
+  footer {
+    flex: 0 0 60px;
+    text-align: center;
+    background: azure;
+    line-height: 60px;
+  }
+  .content-container {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+
+    & > div {
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .left-container,
+    .right-container {
+      flex: 0 0 20%;
+      overflow: hidden;
+    }
+
+    .collpse {
+      flex: 0 0 44px;
+    }
+
+    .collpase-btn {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      button {
+        cursor: pointer;
+      }
+    }
+
+    .left-container {
+      .collpase-btn {
+        float: right;
+      }
+    }
+
+    .right-container {
+      .collpase-btn {
+        float: left;
+      }
+    }
+
+    .content {
+      flex: 1 1 auto;
+    }
+  }
+}
